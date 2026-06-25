@@ -4,139 +4,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Papa Gennaro — Scheda Professionale</title>
-<meta name="description" content="Scheda professionale di Papa Gennaro, tecnico industriale specializzato in manutenzione di impianti e macchinari produttivi.">
+<meta name="description" content="Scheda professionale di Papa Gennaro, tecnico specializzato con oltre 30 anni di esperienza.">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
-
-  :root{
-    --bg:#0e1116;--panel:#161b22;--line:#262d38;--ink:#eef2f7;
-    --muted:#8b97a8;--amber:#ff8a1e;--amber-soft:#ffb061;--steel:#3a4760;
-  }
+  :root{--bg:#0e1116;--panel:#161b22;--line:#262d38;--ink:#eef2f7;--muted:#8b97a8;--amber:#ff8a1e;--amber-soft:#ffb061;--steel:#3a4760}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    background:var(--bg);color:var(--ink);
-    font-family:'Archivo',system-ui,sans-serif;line-height:1.7;
-    -webkit-font-smoothing:antialiased;min-height:100vh;
-    display:flex;align-items:center;justify-content:center;
-    padding:24px 18px;
-    background-image:
-      radial-gradient(70% 50% at 50% 0%, rgba(255,138,30,.12), transparent 60%),
-      linear-gradient(var(--line) 1px,transparent 1px),
-      linear-gradient(90deg,var(--line) 1px,transparent 1px);
-    background-size:auto, 46px 46px, 46px 46px;
-    background-position:center;
-  }
+  body{background:var(--bg);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 18px;background-image:radial-gradient(70% 50% at 50% 0%, rgba(255,138,30,.12), transparent 60%),linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:auto, 46px 46px, 46px 46px;background-position:center}
   .scheda{width:100%;max-width:600px}
-
-  .back{
-    display:inline-flex;align-items:center;gap:8px;
-    font-size:13px;letter-spacing:.04em;color:var(--muted);
-    margin-bottom:26px;transition:color .2s;
-  }
+  .back{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.04em;color:var(--muted);margin-bottom:26px;transition:color .2s}
   .back:hover{color:var(--amber)}
   a{text-decoration:none;color:inherit}
-
   .heading{text-align:center;margin-bottom:30px}
-  .heading .eyebrow{
-    font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.3em;
-    text-transform:uppercase;color:var(--amber);margin-bottom:20px;
-    display:inline-flex;align-items:center;gap:10px;
-  }
+  .heading .eyebrow{font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;display:inline-flex;align-items:center;gap:10px}
   .heading .eyebrow::before,.heading .eyebrow::after{content:"";width:24px;height:1px;background:var(--amber)}
-  .heading h1{
-    font-family:'Space Grotesk',sans-serif;font-weight:700;
-    font-size:clamp(46px,15vw,86px);line-height:.92;letter-spacing:-.03em;
-  }
+  .heading h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(46px,15vw,86px);line-height:.92;letter-spacing:-.03em}
   .heading h1 .sur{color:var(--amber-soft)}
-  .heading .role{
-    margin-top:16px;font-size:clamp(14px,4vw,16px);color:var(--muted);
-    letter-spacing:.04em;
-  }
-
-  .panel{
-    background:var(--panel);border:1px solid var(--line);
-    border-radius:20px;padding:30px 26px;
-    box-shadow:0 30px 80px -34px rgba(0,0,0,.8);
-  }
+  .heading .role{margin-top:16px;font-size:clamp(14px,4vw,16px);color:var(--muted);letter-spacing:.04em}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:30px 26px;box-shadow:0 30px 80px -34px rgba(0,0,0,.8)}
   .lead{font-size:16px;color:#d4dbe6;text-align:center}
   .lead strong{color:var(--ink);font-weight:600}
-
-  .specs{
-    display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
-    border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:28px 0;
-  }
+  .specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:28px 0}
   .spec{background:var(--panel);padding:18px;text-align:center}
   .spec .k{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700}
   .spec .v{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:5px}
-
-  .comp-title{
-    font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.22em;
-    text-transform:uppercase;color:var(--muted);margin-bottom:14px;text-align:center;
-  }
+  .comp-title{font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;text-align:center}
   .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:28px}
   .tag{font-size:13px;padding:7px 13px;border:1px solid var(--steel);border-radius:999px;color:#c3ccda;background:rgba(58,71,96,.18)}
-
   .contact{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direction:column;gap:11px}
   .crow{display:flex;align-items:center;justify-content:space-between;font-size:14px}
   .crow .lbl{color:var(--muted)}
   .crow .val{font-family:'Space Grotesk',sans-serif;font-weight:500;color:#cdd5e1}
-  .placeholder{color:var(--steel);font-style:italic}
-
   footer{margin-top:26px;text-align:center;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--steel)}
-
   @media(min-width:520px){.spec .k{font-size:28px}}
-  @media(prefers-reduced-motion:no-preference){
-    .heading,.panel{animation:rise .65s cubic-bezier(.2,.7,.2,1) both}
-    .panel{animation-delay:.1s}
-    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-  }
+  @media(prefers-reduced-motion:no-preference){.heading,.panel{animation:rise .65s cubic-bezier(.2,.7,.2,1) both}.panel{animation-delay:.1s}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}}
 </style>
 </head>
 <body>
   <main class="scheda">
     <a href="index.html" class="back">← Torna al sito</a>
-
     <div class="heading">
       <span class="eyebrow">Scheda Professionale</span>
       <h1>Papa<br><span class="sur">Gennaro</span></h1>
-      <p class="role">Tecnico Industriale &amp; Specialista di Manutenzione</p>
+      <p class="role">Tecnico Specializzato · 30+ anni di esperienza</p>
     </div>
-
     <div class="panel">
       <p class="lead">
-        Tecnico industriale con <strong>esperienza pluriennale maturata in ambito aziendale</strong>,
-        specializzato nella manutenzione di impianti e macchinari produttivi. Gestisce interventi di
-        diagnostica, manutenzione preventiva e correttiva, garantendo continuità operativa, sicurezza e
-        affidabilità delle linee. Approccio metodico, attenzione al dettaglio e capacità di problem
-        solving sul campo.
+        Tecnico specializzato con <strong>oltre trent'anni di esperienza sul campo</strong>, con competenze trasversali in refrigerazione, condizionamento, elettricità, elettronica, fotovoltaico, domotica, automazioni, idraulica e termoidraulica. Dalla diagnosi alla riparazione, dall'installazione alla manutenzione: un'unica figura affidabile, puntuale e seria.
       </p>
-
       <div class="specs">
-        <div class="spec"><div class="k">10+</div><div class="v">Anni di esperienza</div></div>
-        <div class="spec"><div class="k">Aziendale</div><div class="v">Ambito operativo</div></div>
-        <div class="spec"><div class="k">H24</div><div class="v">Continuità impianti</div></div>
+        <div class="spec"><div class="k">30+</div><div class="v">Anni di esperienza</div></div>
+        <div class="spec"><div class="k">15+</div><div class="v">Ambiti tecnici</div></div>
+        <div class="spec"><div class="k">360°</div><div class="v">Soluzioni complete</div></div>
         <div class="spec"><div class="k">Sul campo</div><div class="v">Interventi diretti</div></div>
       </div>
-
       <div class="comp-title">Competenze</div>
       <div class="tags">
-        <span class="tag">Manutenzione preventiva</span>
-        <span class="tag">Diagnostica guasti</span>
-        <span class="tag">Impianti elettromeccanici</span>
-        <span class="tag">Sicurezza sul lavoro</span>
-        <span class="tag">Lettura schemi tecnici</span>
-        <span class="tag">Automazione di linea</span>
-        <span class="tag">Collaudo &amp; messa in servizio</span>
+        <span class="tag">Refrigerazione</span>
+        <span class="tag">Condizionamento</span>
+        <span class="tag">Elettricità</span>
+        <span class="tag">Elettronica</span>
+        <span class="tag">Fotovoltaico</span>
+        <span class="tag">Domotica</span>
+        <span class="tag">Automazioni</span>
+        <span class="tag">Idraulica</span>
+        <span class="tag">Termoidraulica</span>
+        <span class="tag">Riparazioni</span>
+        <span class="tag">Assistenza</span>
+        <span class="tag">Manutenzione</span>
       </div>
-
       <div class="contact">
-        <div class="crow"><span class="lbl">Telefono</span><span class="val placeholder">da aggiungere</span></div>
-        <div class="crow"><span class="lbl">Email</span><span class="val placeholder">da aggiungere</span></div>
+        <div class="crow"><span class="lbl">Telefono</span><a class="val" href="tel:+393396919809">339 691 9809</a></div>
+        <div class="crow"><span class="lbl">Email</span><a class="val" href="mailto:gennaropp@gmail.com">gennaropp@gmail.com</a></div>
         <div class="crow"><span class="lbl">Zona</span><span class="val">Italia</span></div>
       </div>
     </div>
-
     <footer>Profilo professionale · Papa Gennaro</footer>
   </main>
 </body>
